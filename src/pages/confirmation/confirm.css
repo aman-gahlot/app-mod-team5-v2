@@ -1,0 +1,36 @@
+#confirmation-page{
+    margin: 3vw 
+}
+.head-confirm-text p{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    vertical-align: middle;
+}
+.head-confirm-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+#pleased-text{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+#booking-details{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#booking-table table{
+    width: 100%;
+    height: 15vh;
+}
+#booking-table td{
+    text-align: center;
+}
