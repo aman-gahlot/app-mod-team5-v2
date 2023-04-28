@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./form.css";
 import { book_room } from "../../utils/config";
+import axios from "axios";
 function FormPage() {
   const [firstName, setfirstName] = useState("");
   const [lastName, setlasttName] = useState("");
@@ -17,21 +18,21 @@ function FormPage() {
     //   `Full Name: ${firstName} ${lastName}, noOfRooms: ${noOfRooms}, noOfPeople: ${noOfPeople}, phoneNumber: ${phoneNumber}, checkInDaate: ${checkInDate}, checkOutDate: ${checkOutDate}, modeOfPayment: ${modeOfPayment}, roomType: ${roomType}, email: ${email}`
     // );
     let data = {
-      firstName: firstName,
-      lastName: lastName,
-      noOfRooms: noOfRooms,
-      no_of_people: noOfPeople,
-      email: email,
-      phone: phoneNumber,
-      check_in: checkInDate,
-      check_out: checkOutDate,
-      paymentMethod: modeOfPayment,
-      roomType: roomType,
+      "firstname": firstName,
+      "lastname": lastName,
+      "no_of_room": noOfRooms,
+      "no_of_people": noOfPeople,
+      "email": email,
+      "phoneno": phoneNumber,
+      "check_in": checkInDate,
+      "check_out": checkOutDate,
+      "payment_method": modeOfPayment,
+      "roomtype": roomType,
     };
-    const searchParams = new URLSearchParams(data);
-    console.log("searchParams", searchParams);
-    const queryString = searchParams.toString();
-    window.location.href = book_room + queryString;
+    console.log("payload",data)
+    axios.post(book_room, data).then((res=>{
+      console.log(res)
+    }))
   }
     // https://appmodteam5.azurewebsites.net/api/API?firstName=vishesh&lastName=garg&noOfRooms=1&no_of_people=2&email=vishesh8199@gmail.com&phone=97847873224&check_in=3/3/2023&check_out=4/3/2023&paymentMethod=Cash&roomType=DELUXE_PRIME
   return (
@@ -49,7 +50,7 @@ function FormPage() {
               <label htmlFor="firstName">First Name</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 onChange={(e) => setfirstName(e.target.value)}
               />
             </div>
@@ -144,12 +145,12 @@ function FormPage() {
               onChange={(e) => setroomType(e.target.value)}
             >
               <option>Choose...</option>
-              <option>DELUXE_PRIME</option>
-              <option>DELUXE_SUPREME</option>
-              <option>EXECUTIVE_CLUB_SUITE</option>
-              <option>IMPERIAL_CLUB_ROOM</option>
-              <option>REGAL_CLUB_SUITE</option>
-              <option>TERRACE_CLUB_SUITE</option>
+              <option>DELUXEPRIME</option>
+              <option>DELUXESUPREME</option>
+              <option>EXECUTIVECLUBSUITE</option>
+              <option>IMPERIALCLUBROOM</option>
+              <option>REGALCLUBSUITE</option>
+              <option>TERRACECLUBSUITE</option>
             </select>
           </div>
           </div>
