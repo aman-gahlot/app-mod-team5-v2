@@ -62,13 +62,13 @@ const Header = ({ type }) => {
     console.log("payload", payload)
     let data = axios.post(check_avalability, payload)
     data.then((res) => {
-      let DeluxePrime = "hello";
+      let DELUXEPRIME = res.data.DELUXEPRIME;
       let DELUXESUPREME = res.data.DELUXESUPREME;
       let EXCLUSIVECLUBSUITE = res.data.EXCLUSIVECLUBSUITE;
       let IMPERIALCLUBROOM = res.data.IMPERIALCLUBROOM;
       let REGALCLUBSUITE = res.data.REGALCLUBSUITE;
       let TERRACECLUBSUITE =  res.data.TERRACECLUBSUITE;
-      let roomarr = [res.data.DELUXESUPREME, res.data.DELUXESUPREME, res.data.EXCLUSIVECLUBSUITE, res.data.IMPERIALCLUBROOM, res.data.REGALCLUBSUITE, res.data.TERRACECLUBSUITE]
+      let roomarr = [res.data.DELUXEPRIME, res.data.DELUXESUPREME, res.data.EXCLUSIVECLUBSUITE, res.data.IMPERIALCLUBROOM, res.data.REGALCLUBSUITE, res.data.TERRACECLUBSUITE]
       typeHandeler(roomarr)
     }
     )

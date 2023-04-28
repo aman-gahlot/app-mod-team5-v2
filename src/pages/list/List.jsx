@@ -11,7 +11,7 @@ import { useContext } from "react";
 import axios from "axios";
 import { MyContext } from "../../context/AuthContext";
 const List = () => {
-  const { DeluxePrime, DELUXESUPREME, EXCLUSIVECLUBSUITE, IMPERIALCLUBROOM, REGALCLUBSUITE, TERRACECLUBSUITE} = useContext(MyContext)
+  const { DELUXEPRIME, DELUXESUPREME, EXCLUSIVECLUBSUITE, IMPERIALCLUBROOM, REGALCLUBSUITE, TERRACECLUBSUITE} = useContext(MyContext)
   const [DELUXE_PRIME, setDELUXE_PRIME] = useState();
   const [DELUXE_SUPREME, setDELUXE_SUPREME] = useState();
   const [EXECUTIVE_CLUB_SUITE, setEXECUTIVE_CLUB_SUITE] = useState();
@@ -41,7 +41,7 @@ const List = () => {
       image:
         "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWwlMjByb29tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       roomName: "DELUXE PRIME",
-      available: DeluxePrime,
+      available: DELUXEPRIME,
       price: 9000,
       text: "yet to be changed",
       area: "35 sq Mt",

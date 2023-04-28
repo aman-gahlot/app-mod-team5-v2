@@ -28,7 +28,7 @@ function App() {
     fontWeight: "bold"
   }
   console.log(styleOne);
-  const [DeluxePrime, setDeluxePrime] = useState("Select date to check availablity")
+  const [DELUXEPRIME, setDeluxePrime] = useState("Select date to check availablity")
   const [DELUXESUPREME, setDELUXESUPREME] = useState("Select date to check availablity")
   const [EXCLUSIVECLUBSUITE, setEXCLUSIVECLUBSUITE] = useState("Select date to check availablity")
   const [IMPERIALCLUBROOM, setIMPERIALCLUBROOM] = useState("Select date to check availablity")
@@ -46,7 +46,7 @@ function App() {
     setTextstyle(styleTwo)
   }
   return (
-    <MyContext.Provider value = {{DeluxePrime, DELUXESUPREME, EXCLUSIVECLUBSUITE, IMPERIALCLUBROOM, REGALCLUBSUITE, TERRACECLUBSUITE, typeHandeler}}>
+    <MyContext.Provider value = {{DELUXEPRIME, DELUXESUPREME, EXCLUSIVECLUBSUITE, IMPERIALCLUBROOM, REGALCLUBSUITE, TERRACECLUBSUITE, typeHandeler}}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
