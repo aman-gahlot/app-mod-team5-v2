@@ -1,5 +1,10 @@
+#confirm-container{
+    width: 100%;
+    height: 93vh;
+    background-color: #dfd9f6;
+}
 #confirmation-page{
-    margin: 3vw 
+    margin: 0 3vw;
 }
 .head-confirm-text p{
     text-align: center;
@@ -13,6 +18,8 @@
     justify-content: center;
     align-items: center;
     height: 40vh;
+    color: royalblue;
+    font-style: italic;
 }
 
 #pleased-text{
@@ -21,16 +28,41 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    position: relative;
+    top: -100px;
+    color: rgb(105, 141, 250);
+    font-weight: bolder;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-style: italic;
+
 }
 #booking-details{
     display: flex;
     font-size: 1.5rem;
     font-weight: bold;
+    color: royalblue;
+    position: relative;
+    left: 115px;
+    display: none;
 }
 #booking-table table{
     width: 100%;
     height: 15vh;
+    position: relative;
+    top: 35px;
+    border: 1px dashed royalblue;
+    border-radius: 10px;
+    background-color: #fff;
 }
 #booking-table td{
     text-align: center;
+    color: royalblue;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+#booking-table th{
+    color: rgb(87, 87, 87);
+    font-style: italic;
+    font-size: 1.2rem;
+
 }
