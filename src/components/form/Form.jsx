@@ -87,7 +87,7 @@ function FormPage() {
                 <input
                   type="number"
                   className="form-control"
-                  max="10"
+                  max="50"
                   min="1"
                   id="inputCity"
                   onChange={(e) => setnoOfRooms(e.target.value)}
@@ -178,7 +178,7 @@ function FormPage() {
                   <option value=''>Choose...</option>
                   <option value="DELUXEPRIME">DELUXE PRIME</option>
                   <option value="DELUXESUPREME">DELUXE SUPREME</option>
-                  <option value="EXECUTIVECLUBSUITE">EXECUTIVE CLUB SUITE</option>
+                  <option value="EXCLUSIVECLUBSUITE">EXCLUSIVE CLUB SUITE</option>
                   <option value='IMPERIALCLUBROOM'>IMPERIAL CLUB ROOM</option>
                   <option value="REGALCLUBSUITE">REGAL CLUB SUITE</option>
                   <option value="TERRACECLUBSUITE">TERRACE CLUB SUITE</option>

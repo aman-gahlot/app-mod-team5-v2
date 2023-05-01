@@ -110,6 +110,19 @@
 .siCheckButton:hover{
   background-color: #094876;
 }
+
+.siUnavailableBtn{
+  background-color: #939393;
+  color: white;
+  font-weight: bold;
+  padding: 10px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.siUnavailableBtn:hover{
+  background-color: #5e5e5e;
+}
 .siBookButton{
   background-color: #9bc400;
   color: white;

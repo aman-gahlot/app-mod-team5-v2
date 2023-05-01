@@ -1,10 +1,11 @@
 import "./searchItem.css";
 import axios from "axios";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const SearchItem = (props) => {
   const navigate = useNavigate()
+  const [isDisabled, setisDisabled] = useState(false)
   const formHandeler = () => {
-    localStorage.setItem("room_type", props.name)
     navigate('/form')
   }
   return (
@@ -37,7 +38,9 @@ const SearchItem = (props) => {
         <div className="siDetailTexts">
           <span className="siPrice">Rs. {props.price}</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          <button className="siCheckButton" onClick={formHandeler}>Book Now</button>
+          {props.available === "No Rooms Left" ?  <button className="siUnavailableBtn" disabled id="bbtn">Unavailable</button>
+          :
+          <button className="siCheckButton" onClick={formHandeler} id="bbtn">Book Now</button> }
         </div>
       </div>
     </div>
