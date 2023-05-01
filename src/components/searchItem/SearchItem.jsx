@@ -38,7 +38,7 @@ const SearchItem = (props) => {
         <div className="siDetailTexts">
           <span className="siPrice">Rs. {props.price}</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          {props.available === "No Rooms Left" ?  <button className="siUnavailableBtn" disabled id="bbtn">Unavailable</button>
+          {props.available === "No Rooms Left" ?  <button className="siUnavailableBtn" disabled id="bbtn">Sold Out</button>
           :
           <button className="siCheckButton" onClick={formHandeler} id="bbtn">Book Now</button> }
         </div>
